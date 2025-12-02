@@ -20,5 +20,16 @@ public class Main {
         int[] arr3 = {9, 9, 8, 8, 7, 6, 6, 4, 4, 4, 3, 2};
         sorts.quickSort(arr3, 0, arr3.length - 1);
         System.out.println(Arrays.toString(arr3));
+
+        HashTableImpl<Integer, Integer> hTable = new HashTableImpl<>(5);
+        hTable.add(1,1);
+        hTable.add(2,2);
+        hTable.add(3,3);
+        hTable.add(4,4);
+        hTable.add(5,5);
+        hTable.add(6,6);
+        System.out.println(hTable.get(6));
+        hTable.remove(1);
+        System.out.println(hTable.get(6));
     }
 }
