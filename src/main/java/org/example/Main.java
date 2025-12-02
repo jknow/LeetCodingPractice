@@ -31,5 +31,15 @@ public class Main {
         System.out.println(hTable.get(6));
         hTable.remove(1);
         System.out.println(hTable.get(6));
+
+        ArrayListImpl<String> stringArrList = new ArrayListImpl<>(3);
+        stringArrList.add("one");
+        stringArrList.add("two");
+        stringArrList.add("three");
+        stringArrList.add("four");
+        System.out.println(stringArrList.get(4));
+        System.out.println(stringArrList.get(3));
+        stringArrList.remove(3);
+        System.out.println(stringArrList.get(3));
     }
 }
