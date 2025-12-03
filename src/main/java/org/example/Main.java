@@ -21,25 +21,51 @@ public class Main {
         sorts.quickSort(arr3, 0, arr3.length - 1);
         System.out.println(Arrays.toString(arr3));
 
-        HashTableImpl<Integer, Integer> hTable = new HashTableImpl<>(5);
-        hTable.add(1,1);
-        hTable.add(2,2);
-        hTable.add(3,3);
-        hTable.add(4,4);
-        hTable.add(5,5);
-        hTable.add(6,6);
-        System.out.println(hTable.get(6));
-        hTable.remove(1);
-        System.out.println(hTable.get(6));
+        QueueImpl<Integer> q = new QueueImpl<>(2);
+        q.enqueue(1);
+        q.enqueue(2);
+        System.out.println(q.dequeue());
+        System.out.println(q.dequeue());
+        System.out.println(q.dequeue());
+        q.enqueue(1);
+        q.enqueue(2);
+        q.enqueue(3);
+        q.enqueue(4);
+        System.out.println(q.dequeue());
+        System.out.println(q.dequeue());
+        System.out.println(q.dequeue());
+        System.out.println(q.dequeue());
 
-        ArrayListImpl<String> stringArrList = new ArrayListImpl<>(3);
-        stringArrList.add("one");
-        stringArrList.add("two");
-        stringArrList.add("three");
-        stringArrList.add("four");
-        System.out.println(stringArrList.get(4));
-        System.out.println(stringArrList.get(3));
-        stringArrList.remove(3);
-        System.out.println(stringArrList.get(3));
+        System.out.println("New Queue");
+
+        q = new QueueImpl<>(2);
+        q.enqueue(1);
+        q.enqueue(2);
+        System.out.println(q.dequeue());
+        System.out.println(q.dequeue());
+        System.out.println(q.dequeue());
+        q.enqueue(1);
+        q.enqueue(2);
+        q.enqueue(3);
+        q.enqueue(4);
+        q.enqueue(5);
+        q.enqueue(6);
+        System.out.println(q.dequeue()); // 1
+        System.out.println(q.dequeue()); // 2
+        System.out.println(q.dequeue()); // 3
+        q.enqueue(1);
+        q.enqueue(2);
+        q.enqueue(3);
+        q.enqueue(7);
+        q.enqueue(8);
+        q.enqueue(9);
+        System.out.println(q.dequeue()); // 4
+        System.out.println(q.dequeue()); // 5
+        System.out.println(q.dequeue()); // 6
+        System.out.println(q.dequeue()); // 1
+        System.out.println(q.dequeue()); // 2
+        System.out.println(q.dequeue()); // 3
+        System.out.println(q.dequeue()); // 7
+        System.out.println(q.dequeue()); // 8
     }
 }
