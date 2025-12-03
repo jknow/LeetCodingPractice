@@ -67,5 +67,33 @@ public class Main {
         System.out.println(q.dequeue()); // 3
         System.out.println(q.dequeue()); // 7
         System.out.println(q.dequeue()); // 8
+
+        System.out.println("Stack");
+
+        StackImpl<Integer> stack = new StackImpl<>(2);
+        System.out.println(stack.pop());
+        stack.push(1);
+        stack.push(2);
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+        stack.push(6);
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
     }
 }
