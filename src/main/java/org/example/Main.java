@@ -4,6 +4,31 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+        testBinarySearch();
+    }
+
+    private static void testBinarySearch() {
+        int[] nums = {-1,0,3,5,9,12};
+        int target = -1;
+
+        Search search = new Search();
+        System.out.println(search.binarySearch(nums, target));
+        target = 0;
+        System.out.println(search.binarySearch(nums, target));
+        target = 3;
+        System.out.println(search.binarySearch(nums, target));
+        target = 5;
+        System.out.println(search.binarySearch(nums, target));
+        target = 9;
+        System.out.println(search.binarySearch(nums, target));
+        target = 12;
+        System.out.println(search.binarySearch(nums, target));
+        target = 13;
+        System.out.println(search.binarySearch(nums, target));
+    }
+
+    private static void testQuicksort() {
+        System.out.println("testQuicksort");
         Sorts sorts = new Sorts();
 
         // int[] arr = {2, 3, 4, 4, 4, 6, 6, 7, 8, 8, 9, 9};
@@ -20,6 +45,10 @@ public class Main {
         int[] arr3 = {9, 9, 8, 8, 7, 6, 6, 4, 4, 4, 3, 2};
         sorts.quickSort(arr3, 0, arr3.length - 1);
         System.out.println(Arrays.toString(arr3));
+    }
+
+    private static void testQueue() {
+        System.out.println("testQueue");
 
         QueueImpl<Integer> q = new QueueImpl<>(2);
         q.enqueue(1);
@@ -67,8 +96,10 @@ public class Main {
         System.out.println(q.dequeue()); // 3
         System.out.println(q.dequeue()); // 7
         System.out.println(q.dequeue()); // 8
+    }
 
-        System.out.println("Stack");
+    public static void testStack() {
+        System.out.println("testStack");
 
         StackImpl<Integer> stack = new StackImpl<>(2);
         System.out.println(stack.pop());
@@ -94,6 +125,5 @@ public class Main {
         System.out.println(stack.pop());
         System.out.println(stack.pop());
         System.out.println(stack.pop());
-        System.out.println(stack.pop());
-    }
+        System.out.println(stack.pop());}
 }
