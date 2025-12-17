@@ -15,20 +15,32 @@ public class Main {
         graph.addVertex(0);
         graph.addVertex(1);
         graph.addVertex(2);
+        graph.addVertex(3);
+        graph.addVertex(4);
+        graph.addVertex(5);
 
         // Add edges
         graph.addEdge(0, 1);
         graph.addEdge(0, 2);
         graph.addEdge(1, 2);
+        graph.addEdge(2, 4);
+        graph.addEdge(4, 3);
+        graph.addEdge(0, 5);
+
+        System.out.println(graph.topologicalSort());
 
         // Print the graph
         System.out.println("Graph:");
         graph.printGraph();
+        System.out.println(graph.bfsSearch(0,1));
+        System.out.println(graph.dfsSearch(0,1));
 
         // Remove an edge and print the graph
         graph.removeEdge(0, 1);
         System.out.println("After removing edge (0, 1):");
         graph.printGraph();
+        System.out.println(graph.bfsSearch(0,1));
+        System.out.println(graph.dfsSearch(0,1));
 
         // Remove a vertex and print the graph
         graph.removeVertex(2);
