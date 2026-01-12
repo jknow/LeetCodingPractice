@@ -4,7 +4,13 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        testGraph();
+        testTree();
+    }
+
+    private static void testTree() {
+        Integer[] values = {1,2,2,null,3,null,3};
+        Tree tree = Tree.buildTree(values);
+        tree.printTree();
     }
 
     private static void testGraph() {
